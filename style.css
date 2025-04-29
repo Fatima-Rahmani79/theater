@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Cinzel Decorative', cursive;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.theater {
+    padding: 50px 20px;
+}
+
+.theater h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+
+.screen-with-lights {
+    position: relative;
+    display: inline-block;
+}
+
+.screen {
+    border: 10px solid #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ffcc00, 0 0 60px #ffcc00;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.lights {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.lights.top {
+    top: -30px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
+
+.lights.bottom {
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
+
+.lights.left {
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lights.right {
+    top: 0;
+    bottom: 0;
+    right: -30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lights::before,
+.lights::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #ffcc00;
+    border-radius: 50%;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
